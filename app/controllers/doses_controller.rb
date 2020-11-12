@@ -8,7 +8,6 @@ class DosesController < ApplicationController
   # POST "cocktails/42/doses"
 
   def create
-    def create
     @dose = Dose.new(dose_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail = @cocktail
@@ -17,13 +16,11 @@ class DosesController < ApplicationController
     else
       @doses = @cocktail.doses
       render "cocktails/show"
-    end
   end
 
+  private
 
-    private
-
-    def dose_params
-      params.require(:dose).permit(:description, :ingredient_id)
-    end
+  def dose_params
+    params.require(:dose).permit(:description, :ingredient_id)
+  end
 end
