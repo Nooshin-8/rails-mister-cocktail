@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+//Imports - import your other scss filess
+
+
+// variables
+
+$text_colour-main: #3a3a3a;
+
+h1 {
+  color: $text_colour-main
+}
+
+//Nesting
+
+.banner {
+  background-color: gold;
+
+  p {
+    font-weight: 900;
+  }
+}
+
+//chaining, refer the child to the parent with &
+
+a {
+  color: red
+
+  &:hover{
+    color: blue;
+  }
+}
