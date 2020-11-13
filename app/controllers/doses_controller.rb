@@ -12,10 +12,11 @@ class DosesController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktail_path(@cocktail) # causing the new http request to happen
     else
       @doses = @cocktail.doses
-      render "cocktails/show"
+      render "cocktails/show" # if there are validation errors and is not saved
+      # display all the error
   end
 
   private
