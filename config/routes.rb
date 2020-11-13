@@ -29,5 +29,5 @@ Rails.application.routes.draw do
     resources :doses, only: [:create]
   end
 
-  root "cocktails#index"
+  root to: "cocktails#index"
 end
