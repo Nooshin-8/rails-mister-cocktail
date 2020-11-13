@@ -17,6 +17,7 @@ class DosesController < ApplicationController
       @doses = @cocktail.doses
       render "cocktails/show" # if there are validation errors and is not saved
       # display all the error
+    end
   end
 
   private
