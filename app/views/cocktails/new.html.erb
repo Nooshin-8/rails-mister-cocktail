@@ -2,6 +2,7 @@
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, placeholder: "Mojito" %>
+  <%= f.input :photos, as: :file %>
   <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>
 
